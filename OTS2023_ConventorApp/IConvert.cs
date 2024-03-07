@@ -9,5 +9,6 @@ namespace OTS2023_ConventorApp
     internal interface IConvert
     {
         double Convert(double value);
+        //Change
     }
 }
