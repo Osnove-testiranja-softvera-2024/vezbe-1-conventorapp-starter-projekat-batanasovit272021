@@ -52,6 +52,7 @@
     <Compile Include="ConvertToHours.cs" />
     <Compile Include="ConvertToMinutes.cs" />
     <Compile Include="ConvertToSeconds.cs" />
+    <Compile Include="CustomMoney.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

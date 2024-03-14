@@ -46,7 +46,18 @@ namespace OTS2023_ConventorApp
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
-            groupBox3.Visible = false;
+            if (radioButton5.Checked)
+            {
+                customMoney = true;
+                mass = false;
+                length = false;
+                time = false;
+                money = false;
+                groupBox3.Visible = false;
+                groupBox2.Visible = false;
+                label1.Text = "Custom expression";
+                label2.Text = "Result";
+            }
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -206,6 +217,11 @@ namespace OTS2023_ConventorApp
                     result = seconds.Convert(days);
                 }
                 textBox2.Text = result.ToString();
+            }
+            else if (customMoney)
+            {
+                double money = CustomMoney.ConvertCustom(textBox1.Text);
+                textBox2.Text = money.ToString();
             }
         }
 
